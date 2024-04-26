@@ -280,11 +280,47 @@ body {
   color: #f472b6;
 }
 
-.activity-body{
+.activity-body {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center the grid horizontally */
-  align-items: center; /* Center the grid vertically */
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
-  background-color: #d8b4fe;
+  background-color: #cbd5e1;
+}
+
+.acts {
+  display: flex;
+  gap: 7px;
+}
+
+.act {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px; /* Increase padding for better spacing */
+  height: 500px;
+  width: 350px;
+  font-size: 18px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.text {
+  font-size: 14px;
+  height: auto; /* Allow the text div to adjust its height based on content */
+  width: 100%;
+  overflow-wrap: break-word;
+  margin-top: 10px; /* Add margin-top to create space between text and act div */
+}
+
+.images {
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f9fafb;
+  font-size: 130px;
 }
