@@ -279,3 +279,12 @@ body {
 .previous-next-links a:focus {
   color: #f472b6;
 }
+
+.activity-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the grid horizontally */
+  align-items: center; /* Center the grid vertically */
+  min-height: 100vh;
+  background-color: #d8b4fe;
+}
