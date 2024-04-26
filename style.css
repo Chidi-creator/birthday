@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 20px;
+  background-color: black;
+  animation: blinkCursor 0.8s infinite;
+}
+
+@keyframes blinkCursor {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+* {
+  margin: 0;
+  padding: auto;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+ 
+}
+
+.bodyyy {
+  margin: 0;
+  background-color: #f9a8d4;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the grid horizontally */
+  align-items: center; /* Center the grid vertically */
+  min-height: 100vh;
+}
+.name{
+  width: 100%;
+  text-align: left; /* Align the text to the left */
+  margin-left: 20px; /* Add some margin from the left for better spacing */
+}
+  
+
+.grid-gallery {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0;
+  padding: 50px, 20px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  grid-auto-rows: 450px;
+  grid-auto-flow: dense;
+}
+
+.grid-gallery .grid-item {
+  position: relative;
+  background-color: #efefef;
+  overflow: hidden;
+}
+
+.grid-gallery .grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.grid-gallery .grid-item:hover img {
+  transform: scale(1.1);
+}
+
+.grid-gallery .grid-item a {
+  cursor: zoom-in;
+}
+
+
+@media (max-width: 768px) {
+  .grid-gallery {
+    grid-template-columns: 1fr; /* Set one column */
+    grid-auto-rows: auto; /* Set auto rows */
+    justify-content: center; /* Center the grid horizontally */
+  }
+
+  .grid-gallery .grid-item {
+    width: 100%;
+   /* Add some space between images */
+  }
+}
+
+
+  .header {
+    position: fixed; /* Fixed position */
+    top: 0; /* Fixed to the top of the viewport */
+    width: 100%; /* Full width */
+    background-color: #333; /* Example background color */
+    color: #fff; /* Example text color */
+    padding: 10px 20px; /* Example padding */
+    font-family: Arial, sans-serif; /* Example font */
+    font-size: 18px; /* Example font size */
+    z-index: 1000; /* Ensure the header is above other content */
+  }
+  
+  /* .wishes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    background-color: #f472b6;
+  } */
+
+  .wishes{
+    display: flex;
+    width: 80%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+ 
+    .text-container {
+      flex: 1;
+      padding: 20px;
+  }
+  .paragraph {
+      font-size: 20px;
+      line-height: 1.6;
+      height: 560px;
+      font-family: "Cookie", cursive;
+      font-weight: 400;
+      font-style: normal;
+  }
+  .image-container {
+    flex: 1;
+    height: 560px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f472b6;
+}
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+@media (max-width: 768px) {
+    .wishes {
+        flex-direction: column;
+    }
+    .text-container, .image-container {
+        flex: auto;
+    }
+}
+
+  .music-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    background-color: #f472b6;
+}
+.music-body{
+  background-color: #f472b6;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.music-container p {
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: #fff; /* White text color */
+    margin-bottom: 20px; /* Add space between paragraph and image */
+}
+
+.music-container img {
+    max-width: 100%; /* Ensure the image does not exceed the container width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add shadow effect */
+}
+
+
+  /* .paragraph{
+    height: 100%;
+    margin-top: 15px;
+    width: 600px;
+    height: 600px;
+    font-family: "Montserrat", sans-serif ;
+    font-weight: 600;
+    color: #f1f5f9;
+    font-size: 19px;
+    
+    
+  } */
+
+  /* .paragraph-container {
+    opacity: 0;
+    transform: translateY(50%);
+    font-weight: bold;
+   
+} */
+
+.paragraph-animation {
+    animation: slideIn 1s forwards, fadeIn 1s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.footer {
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.paragraph-body{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+}
+
+.previous-next-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+.previous-next-links a {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.previous-next-links a i {
+  margin-right: 5px;
+}
+
+.previous-next-links a:hover,
+.previous-next-links a:focus {
+  color: #f472b6;
+}
